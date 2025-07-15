@@ -1,55 +1,20 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nightmare Hub + Zumbie Games</title>
-  <style>
-    body {
-      margin: 0;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: white;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      gap: 20px;
-    }
-    h1 {
-      text-align: center;
-    }
-    button {
-      padding: 15px 25px;
-      border: none;
-      border-radius: 12px;
-      background: linear-gradient(45deg, #00f, #0ff);
-      color: white;
-      font-size: 18px;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-    button:hover {
-      transform: scale(1.05);
-    }
-  </style>
-</head>
-<body>
+-- Nightmare Hub + Zumbie Games (Guest Version)
+-- By @isagilegal1313 | zumbie_games | https://kacola1313.github.io/
 
-  <h1>Nightmare Hub + Zumbie Games</h1>
+-- Copia automaticamente o link da página de Key
+setclipboard("https://kacola1313.github.io/")
+print("Link copiado! Acesse https://kacola1313.github.io/ para pegar a Ken.")
 
-  <button onclick="copiarKen()">Copiar Ken (48h)</button>
-  <button onclick="window.open('https://www.tiktok.com/@zumbie_games', '_blank')">Assista meus vídeos no TikTok</button>
-  <button onclick="window.open('https://www.tiktok.com/@zumbie_games', '_blank')">Me siga</button>
-  <button onclick="window.open('https://www.tiktok.com/@zumbie_games', '_blank')">Converse comigo</button>
+-- Janela de input para digitar a Ken
+local key = tostring(game:GetService("Players").LocalPlayer:Kick("Digite a Key no chat ou script."))
 
-  <script>
-    function copiarKen() {
-      navigator.clipboard.writeText('z0mb13_g4m3s141511');
-      alert("Ken copiada! Você tem 48 horas para usar.");
-    }
-  </script>
-
-</body>
-</html>
+-- Exemplo simples de verificação manual via chat
+game:GetService("Players").LocalPlayer.Chatted:Connect(function(msg)
+    if msg == "z0mb13_g4m3s141511" then
+        print("Key correta! Nightmare Hub desbloqueado.")
+        -- Coloque aqui o carregamento real do seu hub:
+        -- loadstring(game:HttpGet("LINK_DO_HUB"))()
+    else
+        print("Key incorreta.")
+    end
+end)
